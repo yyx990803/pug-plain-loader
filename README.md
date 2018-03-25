@@ -60,4 +60,6 @@ If you also intend to use it to import `.pug` files as HTML strings in JavaScrip
 
 See [Pug compiler options](https://pugjs.org/api/reference.html#options).
 
+The `doctype` option is set to `html` by default, since most Vue templates are HTML fragments without explicit doctype.
+
 An additional option `data` can be used to pass locals for the template, although this is typically not recommended when using in Vue components.
