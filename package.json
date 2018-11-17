@@ -23,7 +23,8 @@
     "pug": "^2.0.0"
   },
   "dependencies": {
-    "loader-utils": "^1.1.0"
+    "loader-utils": "^1.1.0",
+    "webpack-merge": "^4.1.4"
   },
   "devDependencies": {
     "pug": "^2.0.3"
