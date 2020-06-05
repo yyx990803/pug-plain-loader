@@ -1,7 +1,7 @@
 {
   "name": "@pointotech/pug-plain-loader",
-  "version": "1.0.0",
-  "description": "Pug to plain HTML loader for Webpack.",
+  "version": "1.0.1",
+  "description": "Webpack loader which compiles Pug templates to plain HTML.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,10 +11,13 @@
     "pug",
     "loader",
     "webpack",
-    "plain"
+    "plain",
+    "text",
+    "vue",
+    "template",
+    "lang"
   ],
   "author": "Pointotech <pointotechrimouski@gmail.com>",
-  "license": "MIT",
   "peerDependencies": {
     "pug": "^3.0.0"
   },
