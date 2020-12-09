@@ -8,7 +8,16 @@ module.exports = function (source) {
     compileDebug: this.debug || false
   }, loaderUtils.getOptions(this))
 
-  const template = pug.compile(source, options)
+  const cleanSource = source
+    .replace(/(?<=\:\w+\=(["'][{[]))[\s\S]*?[}\]]["']/g, templateSanitizer)
+    .trim();
+
+  const template = pug.compile(cleanSource, options)
   template.dependencies.forEach(this.addDependency)
+
   return template(options.data || {})
+}
+
+function templateSanitizer(source) {
+  return source.replace(/(\n|\s{2,})*/g, '')
 }
